@@ -1,0 +1,129 @@
+version: 2
+
+sources:
+    - name: raw
+      description: AdventureWorks DB to SnowFlake/Dbt training.
+      database: bi4all
+      tables:
+        - name: address
+          description: Raw Address data.
+          columns:
+            - name: addressid
+              description: Primary key for address
+              tests:
+                - unique
+                - not_null
+
+        - name: stateprovince
+          description: Raw State province data.
+          columns:
+            - name: stateprovinceid
+              description: Primary key for State province.
+              tests:
+                - unique
+                - not_null
+
+        - name: countryregion
+          description: Raw Country Region data.
+          columns:
+            - name: countryregioncode
+              description: Primary key for Country Region.
+              tests:
+                - unique
+                - not_null
+        - name: creditcard
+          description: Raw Credit Card data.
+          columns:
+            - name: creditcardid
+              description: Primary key for Credit Card.
+              tests:
+                - unique
+                - not_null
+        - name: customer
+          description:  Raw Customer relationship data.
+          columns:
+            - name: customerid
+              description: Primary key for customers.
+              tests:
+                - unique
+                - not_null
+        - name: store
+          description: Raw Stores data.
+          columns:
+            - name: businessentityid
+              description: Primary key for Stores.
+              tests:
+                - unique
+                - not_null
+        - name: person
+          description: Raw person data.
+          columns:
+            - name: businessentityid
+              description: Primary key for person.
+              tests:
+                - unique
+                - not_null
+        - name: date
+          description: Raw Temporal data.
+          columns:
+            - name: date_day
+              description: Primary key for date.
+              tests:
+                - unique
+                - not_null
+        - name: product
+          description: Raw Product data.
+          columns:
+            - name: productid
+              description: Primary key for product.
+              tests:
+                - unique
+                - not_null
+        - name: productcategory
+          description: Raw Product Category data.
+          columns:
+            - name: productcategoryid
+              description: Primary key for Product Category.
+              tests:
+                - unique
+                - not_null
+        - name: productsubcategory
+          description: Raw Product SubCategory data.
+          columns:
+            - name: productsubcategoryid
+              description: Primary key for Product SubCategory.
+              tests:
+                - unique
+                - not_null
+        - name: salesorderdetail
+          description: Raw sales order detail data.
+          columns:
+            - name: salesorderdetailid
+              description: Primary key for sales order.
+              tests:
+                - unique
+                - not_null
+        - name: salesorderheader
+          description: Raw sales order header data.
+          columns:
+            - name: salesorderid
+              description: Primary key for sales order.
+              tests:
+                - unique
+                - not_null
+        - name: salesreason
+          description: Raw sales reason data.
+          columns:
+            - name: salesreasonid
+              description: Primary key for sales reason.
+              tests:
+                - unique
+                - not_null
+        - name: salesorderheadersalesreason
+          description: Raw sales order header sales reason data.
+          columns:
+            - name: salesreasonid
+              description: Primary key for sales order header sales reason.
+             
+  
+        
